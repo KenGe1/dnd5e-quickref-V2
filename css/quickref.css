@@ -566,13 +566,13 @@ input:checked+.slider:before {
 /* Container for settings items to enable flex grid layout */
 #settings-items-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 8px;
 }
 
 .items-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 8px;
 }
 
