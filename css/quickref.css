@@ -68,6 +68,37 @@
     transform: rotate(90deg);
 }
 
+/* "Collapse all items" button in section title */
+.collapse-all-btn {disa
+    background: none;
+    border: 2px solid white;
+    color: white;
+    border-radius: 8px;
+    padding: 2px 8px;
+    font-size: 11pt;
+    font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.collapse-all-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.collapse-all-btn:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition-duration: 0.05s; /* Make the click feedback feel faster */
+}
+
+.collapse-all-btn:disabled {
+    filter: grayscale(80%);
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: transparent;
+}
+
+
 /* Animated collapse/expand for section content. We animate max-height and opacity.
    JS will set explicit max-height values during the transition so the animation is smooth. */
 .section-content {

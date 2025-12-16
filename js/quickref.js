@@ -128,6 +128,8 @@ function add_quickref_item(parent, data, type) {
                 }
             });
         }
+        // After toggling, update the "Collapse all" button state for the parent section
+        updateCollapseAllButtonState(item.closest('.section-container'));
     });
 
     item.setAttribute("title", optional);
@@ -161,6 +163,10 @@ function init() {
     if (typeof window.handleRulesToggle === 'function') {
         window.handleRulesToggle();
     }
+    // Set initial state for all "Collapse all" buttons
+    document.querySelectorAll('.section-container').forEach(section => {
+        updateCollapseAllButtonState(section);
+    });
 }
 
 // Wait for all data scripts to be loaded before initializing and filtering
@@ -196,6 +202,8 @@ function initCollapsibleSections() {
         const title = section.querySelector('.section-title');
         const content = section.querySelector('.section-content');
         const chevron = section.querySelector('.chevron');
+        const collapseAllBtn = section.querySelector('.collapse-all-btn');
+        updateCollapseAllButtonState(section); // Set initial state
 
         // Get saved state from localStorage, default to expanded
         const isCollapsed = localStorage.getItem(section.id + '-collapsed') === 'true';
@@ -242,7 +250,33 @@ function initCollapsibleSections() {
             // Save state to localStorage
             localStorage.setItem(section.id + '-collapsed', willBeCollapsed);
         });
+
+        if (collapseAllBtn) {
+            collapseAllBtn.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent section from collapsing/expanding
+                const expandedItems = section.querySelectorAll('.item:not(:has(.item-content.collapsed)) .item-header');
+                expandedItems.forEach(header => {
+                    header.click();
+                });
+            });
+        }
     });
+}
+
+// Checks a section for any expanded items and sets the disabled state of the "Collapse all" button.
+function updateCollapseAllButtonState(section) {
+    if (!section) return;
+    const collapseAllBtn = section.querySelector('.collapse-all-btn');
+    if (!collapseAllBtn) return;
+
+    // Find items that are both visible (not filtered out) and expanded
+    const expandedVisibleItems = section.querySelectorAll('.item:not(.item-hidden):not(:has(.item-content.collapsed))');
+
+    if (expandedVisibleItems.length === 0) {
+        collapseAllBtn.disabled = true;
+    } else {
+        collapseAllBtn.disabled = false;
+    }
 }
 
 // DOMContentLoaded: Set up settings toggles, state, and filtering logic
@@ -345,6 +379,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 item.classList.remove('item-removed');
             }
         }
+        // After filtering, update all "Collapse all" buttons as item visibility has changed
+        document.querySelectorAll('.section-container').forEach(section => {
+            updateCollapseAllButtonState(section);
+        });
     }
     // Expose filtering function globally so init() can call it
     window.handleRulesToggle = handleRulesToggle;
