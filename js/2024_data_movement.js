@@ -3,8 +3,8 @@ data_movement = [
         title: "Bewegen",
         optional: "Standardregel",
         icon: "run",
-        subtitle: "Kosten: 5 ft pro 5 ft",
-        description: "Bewegungskosten: 5 ft pro 5 ft Bewegung",
+        subtitle: "Kosten: 1,5m pro 1,5m",
+        description: "Bewegungskosten: 1,5m pro 1,5m Bewegung",
         reference: "PHB, S. 24-25, 374.",
         bullets: [
             "Wenn du mehr als eine Bewegungsrate hast, etwa deine Gehgeschwindigkeit und eine Fluggeschwindigkeit, kannst du während deiner Bewegung zwischen ihnen wechseln. Jedes Mal, wenn du wechselst, ziehst du die bereits zurückgelegte Strecke von der neuen Geschwindigkeit ab.",
@@ -17,7 +17,7 @@ data_movement = [
         title: "Klettern",
         optional: "Standardregel",
         icon: "crags",
-        subtitle: "Kosten: +5 ft pro 5 ft",
+        subtitle: "Kosten: +1,5m pro 1,5m",
         description: "Bewegungskosten: jeder Fuß Bewegung kostet 1 zusätzlichen Fuß",
         reference: "PHB, S. 363.",
         bullets: [
@@ -29,7 +29,7 @@ data_movement = [
         title: "Schwimmen",
         optional: "Standardregel",
         icon: "at-sea",
-        subtitle: "Kosten: +5 ft pro 5 ft",
+        subtitle: "Kosten: +1,5m pro 1,5m",
         description: "Bewegungskosten: jeder Fuß Bewegung kostet 1 zusätzlichen Fuß",
         reference: "PHB, S. 376.",
         bullets: [
@@ -41,8 +41,8 @@ data_movement = [
         title: "Fliegen",
         optional: "Standardregel",
         icon: "angel-wings",
-        subtitle: "Kosten: 5 ft pro 5 ft",
-        description: "Bewegungskosten: 5 ft pro 5 ft Flug",
+        subtitle: "Kosten: 1,5m pro 1,5m",
+        description: "Bewegungskosten: 1,5m pro 1,5m Flug",
         reference: "PHB, S. 367.",
         bullets: [
             "Solange du eine Fluggeschwindigkeit hast, kannst du in der Luft bleiben, bis du landest, fällst oder stirbst.",
@@ -54,8 +54,8 @@ data_movement = [
         title: "Sich fallen lassen",
         optional: "Standardregel",
         icon: "falling",
-        subtitle: "Kosten: 0 ft",
-        description: "Bewegungskosten: 0 ft (frei)",
+        subtitle: "Kosten: 0m",
+        description: "Bewegungskosten: 0m (frei)",
         reference: "PHB, S. 25, 372.",
         bullets: [
             "Du kannst dich fallen lassen, ohne Bewegungsrate zu verbrauchen.",
@@ -67,7 +67,7 @@ data_movement = [
         title: "Kriechen",
         optional: "Standardregel",
         icon: "crawl",
-        subtitle: "Kosten: +5 ft pro 5 ft",
+        subtitle: "Kosten: +1,5m pro 1,5m",
         description: "Bewegungskosten: jeder Fuß Bewegung kostet 1 zusätzlichen Fuß",
         reference: "PHB, S. 364.",
         bullets: [
@@ -89,8 +89,8 @@ data_movement = [
         title: "Hochsprung",
         optional: "Standardregel",
         icon: "wingfoot",
-        subtitle: "Kosten: 5 ft",
-        description: "Bewegungskosten: 5 ft pro 5 ft Sprung",
+        subtitle: "Kosten: 1,5m",
+        description: "Bewegungskosten: 1,5m pro 1,5m Sprung",
         reference: "PHB, S. 368.",
         bullets: [
             "Du springst eine Anzahl von Fuß in die Höhe gleich <b>3 + deinem Stärkemodifikator</b>, wenn du dich unmittelbar vor dem Sprung mindestens 10 Fuß zu Fuß bewegst.",
@@ -103,8 +103,8 @@ data_movement = [
         title: "Weitsprung",
         optional: "Standardregel",
         icon: "wingfoot",
-        subtitle: "Kosten: 5 ft pro 5 ft",
-        description: "Bewegungskosten: 5 ft pro 5 ft Sprung",
+        subtitle: "Kosten: 1,5m pro 1,5m",
+        description: "Bewegungskosten: 1,5m pro 1,5m Sprung",
         reference: "PHB, S. 370.",
         bullets: [
             "Du springst eine Anzahl von Fuß bis zu deinem <b>Stärkewert</b>, wenn du dich unmittelbar vor dem Sprung mindestens 10 Fuß zu Fuß bewegst.",
@@ -127,9 +127,9 @@ data_movement = [
         title: "Schwieriges Gelände",
         optional: "Standardregel",
         icon: "stone-pile",
-        subtitle: "Kostenmodifikator: +5 ft pro 5 ft",
+        subtitle: "Kostenmodifikator: +1,5m pro 1,5m",
         reference: "PHB, S. 25, 366.",
-        description: "Bewegung in schwierigem Gelände kostet zusätzlich 5 ft pro 5 ft Bewegung",
+        description: "Bewegung in schwierigem Gelände kostet zusätzlich 1,5m pro 1,5m Bewegung",
         bullets: [
             "Jeder Fuß Bewegung kostet 1 zusätzlichen Fuß.",
             "Schwieriges Gelände ist nicht kumulativ; ein Feld ist entweder schwieriges Gelände oder nicht."
@@ -139,7 +139,7 @@ data_movement = [
         title: "Bewegung beim Ringen",
         optional: "Standardregel",
         icon: "grab",
-        subtitle: "Kosten: +5 ft pro 5 ft",
+        subtitle: "Kosten: +1,5m pro 1,5m",
         description: "Ziehe oder trage die gerungene Kreatur mit dir",
         reference: "PHB, S. 367.",
         bullets: [

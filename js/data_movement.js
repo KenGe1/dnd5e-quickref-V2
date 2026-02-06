@@ -3,8 +3,8 @@ data_movement = [
         title: "Bewegen",
         optional: "Standardregel",
         icon: "run",
-        subtitle: "Kosten: 5 ft pro 5 ft",
-        description: "Bewegungskosten: 5 ft pro 5 ft Bewegung",
+        subtitle: "Kosten: 1,5m pro 1,5m",
+        description: "Bewegungskosten: 1,5m pro 1,5m Bewegung",
         reference: "PHB, S. 190.",
         bullets: [
             "Wenn du mehr als eine Bewegungsrate hast, etwa deine Gehgeschwindigkeit und eine Fluggeschwindigkeit, kannst du während deiner Bewegung zwischen ihnen wechseln. Jedes Mal, wenn du wechselst, ziehst du die bereits zurückgelegte Strecke von der neuen Geschwindigkeit ab.",
@@ -18,8 +18,8 @@ data_movement = [
         title: "Klettern",
         optional: "Standardregel",
         icon: "crags",
-        subtitle: "Kosten: 10 ft pro 5 ft",
-        description: "Bewegungskosten: 10 ft pro 5 ft Klettern",
+        subtitle: "Kosten: 3m pro 1,5m",
+        description: "Bewegungskosten: 3m pro 1,5m Klettern",
         reference: "PHB, S. 182.",
         bullets: [
             "Kann bei schwierigen Kletterstellen einen Stärke- (Athletik-)Wurf erfordern."
@@ -29,8 +29,8 @@ data_movement = [
         title: "Schwimmen",
         optional: "Standardregel",
         icon: "at-sea",
-        subtitle: "Kosten: 10 ft pro 5 ft",
-        description: "Bewegungskosten: 10 ft pro 5 ft Schwimmen",
+        subtitle: "Kosten: 3m pro 1,5m",
+        description: "Bewegungskosten: 3m pro 1,5m Schwimmen",
         reference: "PHB, S. 182.",
         bullets: [
             "Kann bei schwierigen Schwimmstrecken einen Stärke- (Athletik-)Wurf erfordern."
@@ -40,8 +40,8 @@ data_movement = [
         title: "Sich fallen lassen",
         optional: "Standardregel",
         icon: "lob-arrow",
-        subtitle: "Kosten: 0 ft",
-        description: "Bewegungskosten: 0 ft (frei)",
+        subtitle: "Kosten: 0m",
+        description: "Bewegungskosten: 0m (frei)",
         reference: "PHB, S. 190-191, 292.",
         bullets: [
             "Du kannst dich fallen lassen, ohne Bewegungsrate zu verbrauchen.",
@@ -53,8 +53,8 @@ data_movement = [
         title: "Kriechen",
         optional: "Standardregel",
         icon: "crawl",
-        subtitle: "Kosten: 10 ft pro 5 ft",
-        description: "Bewegungskosten: 10 ft pro 5 ft Kriechen",
+        subtitle: "Kosten: 3m pro 1,5m",
+        description: "Bewegungskosten: 3m pro 1,5m Kriechen",
         reference: "PHB, S. 182.",
         bullets: [
 
@@ -90,7 +90,7 @@ data_movement = [
         optional: "Standardregel",
         icon: "wingfoot",
         subtitle: "Weite: STÄ-Wert",
-        description: "Kosten: 5 ft pro 5 ft",
+        description: "Kosten: 1,5m pro 1,5m",
         reference: "PHB, S. 182.",
         bullets: [
             "Du springst eine Anzahl von Fuß bis zu deinem <b>Stärkewert</b>, wenn du dich unmittelbar vor dem Sprung mindestens 10 Fuß (Anlauf) zu Fuß bewegst.",
@@ -113,9 +113,9 @@ data_movement = [
         title: "Schwieriges Gelände",
         optional: "Standardregel",
         icon: "stone-pile",
-        subtitle: "Kostenmodifikator: +5 ft pro 5 ft",
+        subtitle: "Kostenmodifikator: +1,5m pro 1,5m",
         reference: "PHB, S. 182.",
-        description: "Bewegung in schwierigem Gelände kostet zusätzlich 5 ft pro 5 ft Bewegung",
+        description: "Bewegung in schwierigem Gelände kostet zusätzlich 1,5m pro 1,5m Bewegung",
         bullets: [
         ]
     },
