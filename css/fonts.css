@@ -1,0 +1,60 @@
+/* Lokales Laden von Noto Sans (ohne externe Font-API Requests) */
+
+/*
+  Minimal: nur Regular-Datei vorhanden
+  - fonts/noto-sans-v42-latin-regular.woff2 (bevorzugt)
+  - optional: fonts/noto-sans-v42-latin-regular.ttf
+*/
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        url('../fonts/noto-sans-v42-latin-regular.woff2') format('woff2'),
+        url('../fonts/noto-sans-v42-latin-regular.ttf') format('truetype');
+}
+
+/*
+  Falls keine separaten Bold/Italic-Dateien vorhanden sind,
+  wird als Fallback ebenfalls die Regular-Datei verwendet.
+  (Der Browser simuliert dann den Stil.)
+*/
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        url('../fonts/noto-sans-v42-latin-regular.woff2') format('woff2'),
+        url('../fonts/noto-sans-v42-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+        url('../fonts/noto-sans-v42-latin-regular.woff2') format('woff2'),
+        url('../fonts/noto-sans-v42-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src:
+        url('../fonts/noto-sans-v42-latin-regular.woff2') format('woff2'),
+        url('../fonts/noto-sans-v42-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MedievalSharp';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/medievalsharp-v28-latin-regular.woff2') format('woff2');
+}
+
