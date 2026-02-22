@@ -26,15 +26,16 @@
 
 /* Section title bar */
 .section-title {
-    height: 32px;
+    min-height: 38px;
     padding-left: 8px;
     padding-right: 8px;
     font-family: 'MedievalSharp', 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
     font-variant: small-caps;
-    font-weight: bold;
+    font-weight: 700;
+    text-shadow: 0 0 0.01px currentColor;
     background-color: inherit;
     color: white;
-    font-size: 16pt;
+    font-size: 18pt;
     cursor: pointer;
     display: flex;
     align-items: center;
