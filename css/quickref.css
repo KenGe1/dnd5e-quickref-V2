@@ -371,6 +371,11 @@ body.fade-out {
     opacity: 0;
 }
 
+/* Prevent FOUC/layout flash until JS has finished building the interactive UI */
+body.app-loading .page {
+    visibility: hidden;
+}
+
 /* Page container: centers the main content */
 body {
     display: flex;

@@ -7,6 +7,7 @@
     function loadScript(src) {
         var script = document.createElement('script');
         script.src = src;
+        script.async = false;
         script.defer = false;
         head.appendChild(script);
     }
@@ -170,26 +171,44 @@ function init() {
 }
 
 // Wait for all data scripts to be loaded before initializing and filtering
-window.onload = function() {
-    function waitForDataAndInit() {
-        // Check if all required data variables are defined
-        if (
-            typeof data_movement !== 'undefined' &&
-            typeof data_action !== 'undefined' &&
-            typeof data_bonusaction !== 'undefined' &&
-            typeof data_reaction !== 'undefined' &&
-            typeof data_condition !== 'undefined' &&
-            typeof data_environment_obscurance !== 'undefined' &&
-            typeof data_environment_light !== 'undefined' &&
-            typeof data_environment_vision !== 'undefined' &&
-            typeof data_environment_cover !== 'undefined'
-        ) {
-            init();
-        } else {
-            // Try again in 50ms
-            setTimeout(waitForDataAndInit, 50);
-        }
+let isQuickRefInitialized = false;
+let isDomSetupInitialized = false;
+
+function markAppReady() {
+    if (!document.body) return;
+
+    if (isQuickRefInitialized && isDomSetupInitialized) {
+        document.body.classList.remove('app-loading');
     }
+}
+
+function waitForDataAndInit() {
+    if (isQuickRefInitialized) return;
+
+    // Check if all required data variables are defined
+    if (
+        typeof data_movement !== 'undefined' &&
+        typeof data_action !== 'undefined' &&
+        typeof data_bonusaction !== 'undefined' &&
+        typeof data_reaction !== 'undefined' &&
+        typeof data_condition !== 'undefined' &&
+        typeof data_environment_obscurance !== 'undefined' &&
+        typeof data_environment_light !== 'undefined' &&
+        typeof data_environment_vision !== 'undefined' &&
+        typeof data_environment_cover !== 'undefined'
+    ) {
+        isQuickRefInitialized = true;
+        init();
+        markAppReady();
+    } else {
+        // Try again in 25ms
+        setTimeout(waitForDataAndInit, 25);
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', waitForDataAndInit);
+} else {
     waitForDataAndInit();
 }
 
@@ -456,6 +475,9 @@ document.addEventListener("DOMContentLoaded", function () {
     homebrewToggleItem.addEventListener('click', handleToggleClick(homebrewCheckbox));
     darkModeToggleItem.addEventListener('click', handleToggleClick(darkModeCheckbox));
     rules2024ToggleItem.addEventListener('click', handleToggleClick(rules2024Checkbox));
+
+    isDomSetupInitialized = true;
+    markAppReady();
 });
 
 // === Smooth Fade + Grid Reflow ===
