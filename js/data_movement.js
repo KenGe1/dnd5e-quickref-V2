@@ -79,7 +79,7 @@ data_movement = [
         description: "Höhe: 3 + STÄ-Mod",
         reference: "PHB, S. 182.",
         bullets: [
-            "Du springst eine Anzahl von Fuß in die Höhe gleich <b>3 + deinem Stärkemodifikator</b>, wenn du dich unmittelbar vor dem Sprung mindestens 10 Fuß zu Fuß bewegst.",
+            "Du springst eine Anzahl von Fuß in die Höhe gleich <b>3 + deinem Stärkemodifikator</b>, wenn du dich unmittelbar vor dem Sprung mindestens 3 m zu Fuß bewegst.",
             "Bei einem Hochsprung aus dem Stand springst du nur die Hälfte dieser Entfernung.",
             "Du kannst während des Sprungs die Arme um die Hälfte deiner Körpergröße über dich hinaus strecken.",
             "Unter Umständen kann die SL dir erlauben, einen Stärke- (Athletik-)Wurf zu machen, um höher zu springen als gewöhnlich."
