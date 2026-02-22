@@ -376,6 +376,16 @@ body.app-loading .page {
     visibility: hidden;
 }
 
+/* During startup, disable initial state-sync animations (chevrons, collapse, toggles). */
+body:not(.app-initialized) .section-title .chevron,
+body:not(.app-initialized) .item-header .chevron,
+body:not(.app-initialized) .section-content,
+body:not(.app-initialized) .item-content,
+body:not(.app-initialized) .slider,
+body:not(.app-initialized) .slider:before {
+    transition: none !important;
+}
+
 /* Page container: centers the main content */
 body {
     display: flex;

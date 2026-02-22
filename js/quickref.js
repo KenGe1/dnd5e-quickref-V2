@@ -173,12 +173,17 @@ function init() {
 // Wait for all data scripts to be loaded before initializing and filtering
 let isQuickRefInitialized = false;
 let isDomSetupInitialized = false;
+let isAppReadyApplied = false;
 
 function markAppReady() {
-    if (!document.body) return;
+    if (!document.body || isAppReadyApplied) return;
 
     if (isQuickRefInitialized && isDomSetupInitialized) {
-        document.body.classList.remove('app-loading');
+        isAppReadyApplied = true;
+        document.body.classList.add('app-initialized');
+        requestAnimationFrame(function() {
+            document.body.classList.remove('app-loading');
+        });
     }
 }
 
