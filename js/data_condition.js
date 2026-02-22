@@ -96,7 +96,7 @@ data_condition = [
             "Du kannst trotzdem durch Geräusche, die du machst, oder durch Spuren, die du hinterlässt, entdeckt werden.",
             "Du hast Vorteil auf Angriffswürfe.",
             "Angriffswürfe gegen dich haben Nachteil.",
-            "Ein unsichtbares Ziel kann nicht von einem Zauber anvisiert werden, der Sicht erfordert."
+            "Ein unsichtbares Ziel kann nicht von einem Zauber anvisiert werden, der Sicht erfordert.",
             "Magie oder besondere Sinne können eine unsichtbare Kreatur erkennen."
         ]
     },
@@ -106,6 +106,7 @@ data_condition = [
         icon: "internal-injury",
         subtitle: "Du bist gelähmt",
         description: "Du kannst nichts tun",
+        reference: "PHB, S. 290.",
         bullets: [
             "Du bistkampfunfähig und kannst dich nicht bewegen oder sprechen.",
             "Angriffswürfe gegen dich haben Vorteil.",
