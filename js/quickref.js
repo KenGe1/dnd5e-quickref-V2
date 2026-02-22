@@ -172,6 +172,15 @@ function init() {
 
 // Wait for all data scripts to be loaded before initializing and filtering
 let isQuickRefInitialized = false;
+let isDomSetupInitialized = false;
+
+function markAppReady() {
+    if (!document.body) return;
+
+    if (isQuickRefInitialized && isDomSetupInitialized) {
+        document.body.classList.remove('app-loading');
+    }
+}
 
 function waitForDataAndInit() {
     if (isQuickRefInitialized) return;
@@ -190,6 +199,7 @@ function waitForDataAndInit() {
     ) {
         isQuickRefInitialized = true;
         init();
+        markAppReady();
     } else {
         // Try again in 25ms
         setTimeout(waitForDataAndInit, 25);
@@ -465,6 +475,9 @@ document.addEventListener("DOMContentLoaded", function () {
     homebrewToggleItem.addEventListener('click', handleToggleClick(homebrewCheckbox));
     darkModeToggleItem.addEventListener('click', handleToggleClick(darkModeCheckbox));
     rules2024ToggleItem.addEventListener('click', handleToggleClick(rules2024Checkbox));
+
+    isDomSetupInitialized = true;
+    markAppReady();
 });
 
 // === Smooth Fade + Grid Reflow ===
