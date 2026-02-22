@@ -7,13 +7,22 @@
 
     <!-- ✅ Seite verstecken bis JS fertig -->
     <script>
-        document.documentElement.classList.add("js-loading");
-    </script>
-    <style>
-        html.js-loading body {
-            opacity: 0;
-        }
-    </style>
+document.documentElement.classList.add("js-loading");
+</script>
+
+<style>
+/* Standardzustand: sichtbar + Fade möglich */
+body {
+    opacity: 1;
+    transition: opacity .18s ease;
+}
+
+/* Während JS lädt: sofort unsichtbar (ohne Animation) */
+html.js-loading body {
+    opacity: 0;
+    transition: none !important;
+}
+</style>
 
     <title>D&D 5e Kurzreferenz</title>
 
