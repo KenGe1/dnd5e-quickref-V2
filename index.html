@@ -3,29 +3,40 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ✅ Seite verstecken bis JS fertig -->
+    <script>
+        document.documentElement.classList.add("js-loading");
+    </script>
+    <style>
+        html.js-loading body {
+            visibility: hidden;
+        }
+    </style>
+
     <title>D&D 5e Kurzreferenz</title>
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/quickref.css">
     <link rel="stylesheet" type="text/css" href="css/icons.css">
+
     <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet'
-        type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lora:700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet" type="text/css">
+
     <!-- Javascript -->
     <script>
         // Force a hard refresh if the cached version of the app is outdated.
         // This logic is inlined in the HTML to ensure it runs even if the main JS file is cached.
         (function() {
-            // Increment this version number when you deploy breaking changes or significant updates.
-            const CURRENT_APP_VERSION = '2.1.4'; // Updated version
-            window.dndQuickRefAppVersion = CURRENT_APP_VERSION; // Expose version for other scripts
+            const CURRENT_APP_VERSION = '2.1.4';
+            window.dndQuickRefAppVersion = CURRENT_APP_VERSION;
             const VERSION_KEY = 'appVersion';
             const storedVersion = localStorage.getItem(VERSION_KEY);
 
             if (storedVersion !== CURRENT_APP_VERSION) {
                 localStorage.setItem(VERSION_KEY, CURRENT_APP_VERSION);
-                // The 'true' argument forces a hard refresh, clearing the cache for the page.
                 location.reload(true);
             }
         })();
