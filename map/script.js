@@ -168,47 +168,5 @@ hamburger.addEventListener("click", function() {
 })
 
 backArrow.addEventListener("click", function() {
-    window.location.href = "./"
+    window.location.href = "../"
 })
-
-fetch(`./src/Polygan Insel_Region.json`)
-  .then(response => response.json())
-  .then(data => {
-
-    data.forEach(eintrag => {
-
-        // Kleineren und größeren Wert ermitteln
-        const minX = Math.min(eintrag.start.x, eintrag.end.x);
-        const maxX = Math.max(eintrag.start.x, eintrag.end.x);
-        const minY = Math.min(eintrag.start.y, eintrag.end.y);
-        const maxY = Math.max(eintrag.start.y, eintrag.end.y);
-
-        // Leaflet braucht [y, x]
-        const bounds = [
-            [minY, minX],   // oben links
-            [maxY, maxX]    // unten rechts
-        ];
-
-        const rectangle = L.rectangle(bounds, {
-            color: "#58585800",
-            weight: 2,
-            fillOpacity: 0.3
-        }).addTo(map);
-
-        rectangle.bindTooltip(eintrag.name);
-
-        rectangle.on('click', function() {
-            window.location.href = eintrag.link;
-        });
-
-        rectangle.on('mouseover', function () {
-            this.setStyle({ fillOpacity: 0.6 });
-        });
-
-        rectangle.on('mouseout', function () {
-            this.setStyle({ fillOpacity: 0.3 });
-        });
-
-    });
-
-});
