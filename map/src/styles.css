@@ -1,0 +1,110 @@
+body{
+    margin:0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(63,63,63);
+}
+
+/* HEADER */
+header{
+    height:80px;
+    background-color: rgb(29,29,29);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:3ch;
+    min-height: 0;
+}
+
+/* Bereich unter Header */
+.layout{
+    display:flex;
+    height:calc(100vh - 80px);   /* volle Höhe minus Header */
+    text-align: center;
+}
+
+/* SIDEBAR links */
+.sideBar{
+    display: flex;
+    flex-direction:  column;
+    align-items: flex-start;
+    width:20%;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgb(97,97,97);
+    padding: 10px;
+}
+.sideBar img{
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+}
+
+.sideBar p{
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 10px;
+    cursor: default;
+    white-space: normal;        /* erlaubt Zeilenumbruch */
+    word-break: break-word;     /* bricht lange Wörter */
+    overflow-wrap: anywhere;    /* extra sicher */
+}
+
+.sideBar .item{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(29,29,29);
+    border-radius: 15px;
+    width: 90%;
+    margin-top: 5px;
+    padding: 8px;
+    align-items: center;
+}
+
+/* MAIN rechts */
+main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+/* MAP */
+#map{
+    margin:30px;
+    width:100%;
+    border-radius:15px;
+    overflow:hidden;
+    background-color: rgb(97,97,97);
+}
+
+#backArrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 12px;
+    height: 45px;
+    width: 45px;
+    background-color: rgba(240, 240, 240, 0.13);
+    border-radius: 10px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+#hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 12px;
+    height: 45px;
+    width: 45px;
+    background-color: rgba(240, 240, 240, 0.13);
+    border-radius: 10px;
+    padding: 3px;
+    cursor: pointer;
+}
