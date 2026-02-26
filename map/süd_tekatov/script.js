@@ -3,7 +3,7 @@ const name = "Süd Tekatov"
 const backArrow = document.getElementById("backArrow")
 const hamburger = document.getElementById("hamburger")
 const sideBar = document.getElementById("sideBar")
-let sideBarOpen = true
+let sideBarOpen = false
 
 const titelText = name
 const headerText = name
