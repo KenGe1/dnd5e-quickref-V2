@@ -29,6 +29,7 @@ header{
 .layout{
     display:flex;
     height:calc(100vh - 80px);   /* volle Höhe minus Header */
+    min-height: 0;
     text-align: center;
 }
 
@@ -86,6 +87,8 @@ main{
 #map{
     margin:30px;
     width:100%;
+    flex: 1 1 auto;
+    min-height: 0;
     border-radius:15px;
     overflow:hidden;
     background-color: rgb(97,97,97);
@@ -130,6 +133,7 @@ main{
         width: auto;
         max-width: 100%;
         min-height: 0;
+        max-height: 28vh;
         flex-direction: row;
         align-items: stretch;
         gap: 12px;
@@ -160,6 +164,7 @@ main{
 
     #map {
         margin: 12px;
+        min-height: 240px;
     }
 
     #backArrow,
