@@ -177,9 +177,9 @@ main{
 
     #backArrow,
     #hamburger {
-        top: 50%;
+        top: 21px;
         margin: 0 14px;
-        transform: translateY(-50%);
+        z-index: 1000;
         height: 62px;
         width: 62px;
         padding: 7px;
