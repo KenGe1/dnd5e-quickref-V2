@@ -680,6 +680,16 @@ input:checked+.slider:before {
     gap: 8px;
 }
 
+/* Keep feedback action grouped under settings toggles by placing it after switches */
+#feedback-link-item {
+    order: 99;
+}
+
+.feedback-link-content {
+    color: inherit;
+    text-decoration: none;
+}
+
 .items-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
