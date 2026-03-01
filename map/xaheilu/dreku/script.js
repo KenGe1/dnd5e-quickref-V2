@@ -144,7 +144,7 @@ fetch(`https://pub-254bba07fa6840d4811b027ba5135175.r2.dev/json/${name}.json`)
 
 var bounds = [[0,0], [1536, 2048]]; // an Bildgröße anpassen!
 
-L.imageOverlay(`https://pub-254bba07fa6840d4811b027ba5135175.r2.dev/maps/${name}.jpg`, bounds).addTo(map);
+L.imageOverlay(`https://pub-254bba07fa6840d4811b027ba5135175.r2.dev/maps/${name}.avif`, bounds).addTo(map);
 
 map.fitBounds(bounds);
 
