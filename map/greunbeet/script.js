@@ -42,7 +42,8 @@ fetch(`https://pub-254bba07fa6840d4811b027ba5135175.r2.dev/json/${name}.json`)
             "magic-swirl": "Magiergilde",
             scales: "Händlergilde",
             abenteurer: "Abenteurergilde",
-            help: "Unbekannt"
+            help: "Unbekannt",
+            "Beer-stein": "Spelunke"
         };
 
         // Nur Marker filtern
